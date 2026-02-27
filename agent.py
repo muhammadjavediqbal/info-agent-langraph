@@ -42,6 +42,12 @@ class AgentState(TypedDict):
 TOOLS = [calculator, get_weather, search_web]
 MAX_ITERATIONS = 5  # hard cap on reasoning loops
 
+def _get_secret(key: str) -> str:
+    try:
+        import streamlit as st
+        return st.secrets[key]
+    except Exception:
+        return os.environ.get(key, "")
 # ─────────────────────────────────────────────
 # 3. LLM
 # ─────────────────────────────────────────────
