@@ -6,6 +6,12 @@ import os
 from langchain_core.tools import tool
 
 try:
+    import streamlit as st
+    api_key = st.secrets["TAVILY_API_KEY"]
+except Exception:
+    api_key = os.environ.get("TAVILY_API_KEY", "")
+
+try:
     from tavily import TavilyClient
 except ImportError:
     raise ImportError("Run: pip install tavily-python")
