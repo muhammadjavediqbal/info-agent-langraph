@@ -63,7 +63,7 @@ OPENROUTER_API_KEY = _get_secret("OPENROUTER_API_KEY")
 if not OPENROUTER_API_KEY:
     raise ValueError("OPENROUTER_API_KEY not set. Add it to .streamlit/secrets.toml or Streamlit Cloud secrets.")
 
-MODEL_NAME = "meta-llama/llama-3.1-8b-instruct"
+MODEL_NAME = "mistralai/mistral-7b-instruct"
 
 llm = ChatOpenAI(
     base_url="https://openrouter.ai/api/v1",
