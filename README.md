@@ -1,4 +1,4 @@
-# MVP AI Agent with LangGraph
+# AI Agent with LangGraph
 
 A minimal but complete ReAct agent using LangGraph + Claude.
 
