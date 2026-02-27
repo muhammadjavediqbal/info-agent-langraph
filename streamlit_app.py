@@ -2,9 +2,6 @@ import html
 import streamlit as st
 from agent import run_agent
 
-import streamlit as st
-st.write(st.secrets)  # remove after debugging
-
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="InfoAgent",
